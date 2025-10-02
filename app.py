@@ -57,19 +57,19 @@ def analise_financeira():
         [
           {{
             "fato": "...",
-            "causas": ["...", "..."],
-            "acoes": ["...", "..."]
+            "causa": ["...", "..."],
+            "acao": ["...", "..."]
           }},
           {{
             "fato": "...",
-            "causas": ["...", "..."],
-            "acoes": ["...", "..."]
+            "causa": ["...", "..."],
+            "acao": ["...", "..."]
           }}
         ]
         """
 
         # Chama o modelo Gemini
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
 
         # Trata a resposta do Gemini
@@ -106,3 +106,4 @@ def analise_financeira():
 # =====================
 if __name__ == '__main__':
     app.run(debug=True)
+    
